@@ -19,6 +19,7 @@ int isalpha(int c);
 int isdigit(int c);
 int isalnum(int c);
 int isascii(int c);
+int ft_isprint(int c);
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 
