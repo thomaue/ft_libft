@@ -12,14 +12,14 @@
 
 #include "file.h"
 
-int isalnum(int c)
+int ft_isalnum(int c)
 {
-    return (isalpha(c) || isdigit(c));
+    return (ft_isalpha(c) || ft_isdigit(c));
 }
 
 // int main(void)
 // {
 //     for(int i = 45; i <= 70; i++)
-//         printf("%c : %d\n", i, isalnum(i));
+//         printf("%c : %d\n", i, ft_isalnum(i));
 //     return (0);
 // }

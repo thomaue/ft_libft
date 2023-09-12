@@ -12,7 +12,7 @@
 
 #include "file.h"
 
-int isascii(int c)
+int ft_isascii(int c)
 {
     return(c <= 127);
 }
@@ -21,15 +21,15 @@ int isascii(int c)
 // {
 //     // return 0
 
-//     printf("%d\n", isascii('Œ'));
-//     printf("%d\n", isascii('♀'));
-//     printf("%d\n", isascii('™'));
+//     printf("%d\n", ft_isascii('Œ'));
+//     printf("%d\n", ft_isascii('♀'));
+//     printf("%d\n", ft_isascii('™'));
 
 //     // return 1
 
-//     printf("%d\n", isascii('a'));
-//     printf("%d\n", isascii('0'));
-//     printf("%d\n", isascii('2'));
+//     printf("%d\n", ft_isascii('a'));
+//     printf("%d\n", ft_isascii('0'));
+//     printf("%d\n", ft_isascii('2'));
 
 //     return (0);
 // }

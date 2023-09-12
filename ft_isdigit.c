@@ -12,7 +12,7 @@
 
 #include "file.h"
 
-int isdigit(int c)
+int ft_isdigit(int c)
 {
     return (c >= '0' && c <= '9');
 }
@@ -20,6 +20,6 @@ int isdigit(int c)
 // int main(void)
 // {
 //     for(int i = 45; i <= 60; i++)
-//         printf("%c : %d\n", i, isdigit(i));
+//         printf("%c : %d\n", i, ft_isdigit(i));
 //     return (0);
 // }
