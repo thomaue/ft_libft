@@ -26,5 +26,6 @@ int ft_strlen(char *str);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 int toupper(int c);
+int tolower(int c);
 
 #endif
