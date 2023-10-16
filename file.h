@@ -9,6 +9,7 @@
 void    ft_bzero(void *s, size_t n);
 void *ft_memset(void *str, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+int memcmp( const void * pointer1, const void * pointer2, size_t size );
 
 
 char *ft_itoa(int nbr);
