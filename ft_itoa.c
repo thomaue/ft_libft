@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"file.h"
+#include"libft.h"
 
 char *ft_mal_the_num(int nbr, int len_nb)
 {   

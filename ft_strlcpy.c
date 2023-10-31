@@ -6,11 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 10:46:29 by tauer             #+#    #+#             */
-/*   Updated: 2023/09/12 18:44:51 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/31 15:14:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "file.h"
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
