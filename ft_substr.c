@@ -17,24 +17,24 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return(str);
 }
 
-int main()
-{
-    const char *input = "This is a test string";
-    unsigned int start = 5;
-    size_t len = 4;
+// int main()
+// {
+//     const char *input = "This is a test string";
+//     unsigned int start = 5;
+//     size_t len = 4;
 
-    char *result = ft_substr(input, start, len);
+//     char *result = ft_substr(input, start, len);
 
-    if (result != NULL)
-    {
-        printf("Original string:%s\n", input);
-        printf("Substring:%s\n", result);
-        free(result);
-    }
-    else
-    {
-        printf("Memory allocation error.\n");
-    }
+//     if (result != NULL)
+//     {
+//         printf("Original string:%s\n", input);
+//         printf("Substring:%s\n", result);
+//         free(result);
+//     }
+//     else
+//     {
+//         printf("Memory allocation error.\n");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }

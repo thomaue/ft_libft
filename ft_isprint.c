@@ -2,25 +2,25 @@
 
 int ft_isprint(int c)
 {
-    return(c >= 32 && c <= 127);
+    return(c >= 32 && c <= 126);
 }
 
-//yo
+// //yo
 
-int main(void)
-{
-    // return 0
+// int main(void)
+// {
+//     // return 0
 
-    printf("0 : %d\n", ft_isprint('\n'));
-    printf("0 : %d\n", ft_isprint('\t'));
-    printf("0 : %d\n\n", ft_isprint('\v'));
+//     printf("0 : %d\n", ft_isprint('\n'));
+//     printf("0 : %d\n", ft_isprint('\t'));
+//     printf("0 : %d\n\n", ft_isprint('\v'));
 
-    // return 1
+//     // return 1
 
-    printf("1 : %d\n", ft_isprint('a'));
-    printf("1 : %d\n", ft_isprint('0'));
-    printf("1 : %d\n", ft_isprint('2'));
-    printf("1 : %d\n", ft_isprint(' '));
+//     printf("1 : %d\n", ft_isprint('a'));
+//     printf("1 : %d\n", ft_isprint('0'));
+//     printf("1 : %d\n", ft_isprint('2'));
+//     printf("1 : %d\n", ft_isprint(' '));
 
-    return (0);
-}
+//     return (0);
+// }

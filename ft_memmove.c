@@ -21,15 +21,15 @@ void *ft_memmove(void *dst, const void *src, size_t n)
     return(dst);
 }
 
-int   main(void)
-  {
-    char *dst = strdup("contigo");
-    char *src = strdup("poco loco"); 
+// int   main(void)
+//   {
+//     char *dst = strdup("contigo");
+//     char *src = strdup("poco loco"); 
 
-    printf("dst : %s / %p\n", dst, ft_memmove(dst, src, 10));
+//     printf("dst : %s / %p\n", dst, ft_memmove(dst, src, 10));
 
-    free(dst);
-    free(src);
+//     free(dst);
+//     free(src);
 
-    return 0;
-  }
+//     return 0;
+//   }

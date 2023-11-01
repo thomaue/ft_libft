@@ -17,7 +17,7 @@ int ft_isspace(char c)
     return(c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t' || c == '\v');
 }
 
-int ft_atoi(char *str)
+int ft_atoi(const char *str)
 {
     size_t i;
     int sign;
@@ -29,7 +29,7 @@ int ft_atoi(char *str)
 
     while(str[i] && ft_isspace(str[i]))
         i++;
-    while(str[i] == '-' || str[i] == '+')
+    if(str[i] == '-' || str[i] == '+')
         if(str[i++] == '-')
             sign *= -1;
     while(str[i] >= '0' && str[i] <= '9')

@@ -6,21 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 10:46:29 by tauer             #+#    #+#             */
-/*   Updated: 2023/10/31 15:14:19 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/01 17:00:56 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
