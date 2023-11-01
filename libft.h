@@ -24,10 +24,12 @@ int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
 
-int ft_strlen(char *str);
+size_t ft_strlen(const char *str);
 char *strchr(const char *s, int c);
 char *strrchr(const char *s, int c);
 char *strnstr(const char *  s1 , const char *  s2 , size_t  len);
+char *ft_strjoin(char const *s1, char const *s2);
+
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
