@@ -31,6 +31,7 @@ char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 char *ft_strnstr(const char *  s1 , const char *  s2 , size_t  len);
 char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strdup(const char *s);
 
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
