@@ -12,7 +12,7 @@
 
 #include"libft.h"
 
-char *ft_mal_the_num(int nbr, int len_nb)
+char *ft_mal_the_num(long int nbr, int len_nb)
 {   
     char *str_num;
     int null_size;
@@ -38,7 +38,7 @@ char *ft_mal_the_num(int nbr, int len_nb)
     return (str_num);
 }
 
-char *str_fill(char *mal_space, int nbr, int sign)
+char *str_fill(char *mal_space, long int nbr, int sign)
 {
     int i;
 
@@ -80,21 +80,24 @@ char *rev_num(char *str_num)
 char *ft_itoa(int nbr)
 {
     char *str_mal;
+    long int nb;
 
-    if(nbr == 0)
+    nb = nbr;
+
+    if(nb == 0)
     {
         str_mal = (char *)malloc(sizeof(char) * 2);
         str_mal[0] = '0';
         str_mal[1] = '\0';
         return (str_mal);
     }
-    else if(nbr < 0)
+    else if(nb < 0)
     {
-        nbr *= -1;
-        return(rev_num(str_fill(ft_mal_the_num(nbr, 0),nbr, 1)));
+        nb *= -1;
+        return(rev_num(str_fill(ft_mal_the_num(nb, 0),nb, 1)));
     }
     else    
-        return(rev_num(str_fill(ft_mal_the_num(nbr, 0),nbr, 0)));
+        return(rev_num(str_fill(ft_mal_the_num(nb, 0),nb, 0)));
     return (NULL);
 }
 
