@@ -3,112 +3,105 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 18:44:17 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/12 18:44:17 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/06 15:30:17 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/06 15:30:17 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-char *ft_mal_the_num(long int nbr, int len_nb)
-{   
-    char *str_num;
-    int null_size;
-
-    if(nbr < 0)
-    {
-        null_size = 2;
-        nbr *= -1;
-    }
-    else
-        null_size = 1;
-
-    while(nbr > 0)
-    {
-        nbr/=10;
-        len_nb++;
-    }
-
-    str_num = (char *)malloc(sizeof(char) * (len_nb + null_size));
-    if(!str_num)
-        return (NULL);
-    
-    return (str_num);
-}
-
-char *str_fill(char *mal_space, long int nbr, int sign)
+char	*ft_mal_the_num(long int nbr, int len_nb)
 {
-    int i;
+	char	*str_num;
+	int		null_size;
 
-    i = 0;
-    while(nbr > 0)
-    {
-        mal_space[i++] = nbr % 10 + '0';
-        nbr/=10;
-    }
-    if(sign == 1)
-        mal_space[i++] = '-';
-    mal_space[i] = '\0';
-
-    return (mal_space);
+	if (nbr < 0)
+	{
+		null_size = 2;
+		nbr *= -1;
+	}
+	else
+		null_size = 1;
+	while (nbr > 0)
+	{
+		nbr /= 10;
+		len_nb++;
+	}
+	str_num = (char *)malloc(sizeof(char) * (len_nb + null_size));
+	if (!str_num)
+		return (NULL);
+	return (str_num);
 }
 
-char *rev_num(char *str_num)
+char	*str_fill(char *mal_space, long int nbr, int sign)
 {
-    size_t len_str;
-    size_t i;
-    char temp;
+	int	i;
 
-    len_str = 0;
-    i = 0;
-
-    while(str_num[len_str])
-        len_str++;
-
-    while(i < len_str / 2)
-    {
-        temp = str_num[i];
-        str_num[i] = str_num[len_str - i - 1];
-        str_num[len_str - i - 1] = temp;
-        i++;
-    }
-    return str_num;
+	i = 0;
+	while (nbr > 0)
+	{
+		mal_space[i++] = nbr % 10 + '0';
+		nbr /= 10;
+	}
+	if (sign == 1)
+		mal_space[i++] = '-';
+	mal_space[i] = '\0';
+	return (mal_space);
 }
 
-char *ft_itoa(int nbr)
+char	*rev_num(char *str_num)
 {
-    char *str_mal;
-    long int nb;
+	size_t	len_str;
+	size_t	i;
+	char	temp;
 
-    nb = nbr;
-
-    if(nb == 0)
-    {
-        str_mal = (char *)malloc(sizeof(char) * 2);
-        str_mal[0] = '0';
-        str_mal[1] = '\0';
-        return (str_mal);
-    }
-    else if(nb < 0)
-    {
-        nb *= -1;
-        return(rev_num(str_fill(ft_mal_the_num(nb, 0),nb, 1)));
-    }
-    else    
-        return(rev_num(str_fill(ft_mal_the_num(nb, 0),nb, 0)));
-    return (NULL);
+	len_str = 0;
+	i = 0;
+	while (str_num[len_str])
+		len_str++;
+	while (i < len_str / 2)
+	{
+		temp = str_num[i];
+		str_num[i] = str_num[len_str - i - 1];
+		str_num[len_str - i - 1] = temp;
+		i++;
+	}
+	return (str_num);
 }
 
-// int main(void)
-// {
-//     int nbr_main = 123456789;
+char	*ft_itoa(int nbr)
+{
+	char		*str_mal;
+	long int	nb;
 
-//     char *nbr_dup = ft_itoa(nbr_main);
+	nb = nbr;
+	if (nb == 0)
+	{
+		str_mal = (char *)malloc(sizeof(char) * 2);
+		str_mal[0] = '0';
+		str_mal[1] = '\0';
+		return (str_mal);
+	}
+	else if (nb < 0)
+	{
+		nb *= -1;
+		return (rev_num(str_fill(ft_mal_the_num(nb, 0), nb, 1)));
+	}
+	else
+		return (rev_num(str_fill(ft_mal_the_num(nb, 0), nb, 0)));
+	return (NULL);
+}
 
-//     printf("%s\n", nbr_dup);
+int main(void)
+{
+    int nbr_main = -123456789;
 
-//     free(nbr_dup);
-//     return (0);
-// }
+    char *nbr_dup = ft_itoa(nbr_main);
+
+    printf("%s\n", nbr_dup);
+
+    free(nbr_dup);
+    return (0);
+}

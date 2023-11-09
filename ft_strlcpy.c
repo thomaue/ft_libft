@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 10:46:29 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/03 21:35:23 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/06 16:10:30 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_strlcpy(char *dest,const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;
 
@@ -47,6 +47,6 @@ unsigned int ft_strlcpy(char *dest,const char *src, size_t size)
 
 // 	ft_strlcpy(dest, src, size);
 // 	printf("returned int : %d\n", ft_strlcpy(dest, src, size));
-// 	printf("return dest :%s\n\n", dest);
-// 	return 0;
+// 	printf("return (dest :%s\n\n", dest));
+// 	return (0);
 // }

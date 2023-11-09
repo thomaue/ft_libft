@@ -59,5 +59,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 // 	printf("mine : %s\n", dest_mine);
 // 	printf("%d\n", ft_strlcat(dest_mine, src_mine, size));
 
-// 	return 0;
+// 	return (0);
 // }

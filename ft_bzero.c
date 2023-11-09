@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 18:44:29 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/12 18:44:29 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/06 15:29:07 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/06 15:29:07 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *c = (unsigned char *)s;
-    while(n > 0)
-    {
-        *c++ = 0;
-        n--;
-    }
+	unsigned char	*c;
+
+	if (n <= 0)
+		return ;
+	c = s;
+	while (n-- > 0)
+		*c++ = 0;
 }
 
 // int main(void)
@@ -37,5 +38,5 @@ void    ft_bzero(void *s, size_t n)
 //         printf("%d ", array[size]);
 //     printf("\n");
 
-//     return 0;
+//     return (0);
 // }

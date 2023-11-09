@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2023/09/13 12:52:39 by marvin            #+#    #+#             */
 /*   Updated: 2023/09/13 12:52:39 by marvin           ###   ########.fr       */
 /*                                                                            */
@@ -12,21 +15,21 @@
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    if(s == NULL)
-        return (NULL);
+	const unsigned char	*ptr_s;
 
-    const unsigned char *ptr_s = s;
-
-    while(n > 0)
-    {
-        if(*ptr_s == (unsigned char)c)
-            return (void *)ptr_s;
-        ptr_s++;
-        n--;
-    }
-    return(NULL);
+	if (s == NULL)
+		return (NULL);
+	ptr_s = s;
+	while (n > 0)
+	{
+		if (*ptr_s == (unsigned char)c)
+			return ((void *)ptr_s);
+		ptr_s++;
+		n--;
+	}
+	return (NULL);
 }
 
 // int main(void)

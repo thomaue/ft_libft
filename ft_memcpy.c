@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 18:44:11 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/12 18:44:11 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/06 15:32:50 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/06 15:32:50 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned char *ptr_dst = (unsigned char *)dst;        
+	unsigned char	*ptr_dst;
 
-    while(n--)
-        *ptr_dst++ = *(unsigned char *)src++;
-
-    return (dst);
+	ptr_dst = (unsigned char *)dst;
+	while (n--)
+		*ptr_dst++ = *(unsigned char *)src++;
+	return (dst);
 }
 
 // int main(void)
@@ -35,5 +35,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 //         printf("%d - %d\n", array[size], num_dst[size]);
 
 //     free(num_dst);
-//     return 0;
+//     return (0);
 // }

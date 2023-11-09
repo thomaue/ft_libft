@@ -1,20 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 15:45:26 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/06 15:45:26 by tauer            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t max_size = 0;
-    
-    char *str = (char *)malloc(sizeof(char const *) * (len + 1));
+	char	*str;
+	size_t	max_size;
 
-    s += start;
-
-    while(*s && max_size < len)
-    {
-        str[max_size++] = *s;
-        s++;
-    }
-    str[max_size] = 0;
-    return(str);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	max_size = 0;
+	s += start;
+	while (*s && max_size < len)
+	{
+		str[max_size++] = *s;
+		s++;
+	}
+	str[max_size] = 0;
+	return (str);
 }
 
 // int main()
@@ -36,5 +48,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 //         printf("Memory allocation error.\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }

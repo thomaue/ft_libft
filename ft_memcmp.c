@@ -1,19 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 17:44:42 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/08 17:44:42 by tauer            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
 #include "libft.h"
 
-  int ft_memcmp(const void * pointer1, const void * pointer2, size_t size )
-  {
-    return (ft_strncmp((char *)pointer1, (char *)pointer2, size));
-  }
 
-  // int   main(void)
-  // {
-  //   char *str = strdup("poco loco");
-  //   char *str2 = strdup("poco loco"); 
+int	ft_memcmp(const void *pointer1, const void *pointeur2, size_t size)
+{
+	size_t i = 0;
 
-  //   printf("difference ascii : %d\n", ft_memcmp(str, str2, 5));
+	while (i < size)
+	{
+		if (((unsigned char *)pointer1)[i] != ((unsigned char *)pointeur2)[i])
+			return (((unsigned char *)pointer1)[i] - ((unsigned char *)pointeur2)[i]);
+		i++;
+	}
+	return(0);
+}
 
-  //   free(str);
-  //   free(str2);
+// int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)
+// {
+// 	return (ft_strncmp((const char *)pointer1, (const char *)pointer2, size));
+// }
 
-  //   return 0;
-  // }
+// int   main(void)
+// {
+// 	char s[] = {-128, 0, 127, 0};
+// 	char sCpy[] = {-128, 0, 127, 0};
+
+//   	printf("difference ascii : %d\n", ft_memcmp(s, sCpy, 4));
+
+//   	return (0);
+// }

@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 18:44:24 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/12 18:44:24 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/06 15:29:39 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/06 15:29:39 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_is_lower(int c)
+int	ft_is_lower(int c)
 {
-    return(c >= 'a' && c <= 'z');
+	return (c >= 'a' && c <= 'z');
 }
 
-int ft_is_upper(int c)
+int	ft_is_upper(int c)
 {
-    return(c >= 'A' && c <= 'Z');
+	return (c >= 'A' && c <= 'Z');
 }
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    return (ft_is_lower(c) || ft_is_upper(c));
+	return (ft_is_lower(c) || ft_is_upper(c));
 }
 
 // int main(void)

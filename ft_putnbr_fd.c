@@ -3,37 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 11:18:26 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/02 11:18:26 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/06 15:36:51 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/06 15:36:51 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    long num = n;
-    
-    if(num < 0)
-    {
-        ft_putchar_fd('-', fd);
-        num = -num;
-    }
+	long	num;
 
-    if(num > 9)
-        ft_putnbr_fd(num / 10, fd);
-        
-    ft_putchar_fd(num % 10 + 48, fd);
+	num = n;
+	if (num < 0)
+	{
+		ft_putchar_fd('-', fd);
+		num = -num;
+	}
+	if (num > 9)
+		ft_putnbr_fd(num / 10, fd);
+	ft_putchar_fd(num % 10 + 48, fd);
 }
 
 // int main(void)
 // {
 //     int num = INT_MAX;
 
-
-
 //     return (0);
 // }
-
