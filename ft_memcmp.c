@@ -10,22 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
-
 
 int	ft_memcmp(const void *pointer1, const void *pointeur2, size_t size)
 {
-	size_t i = 0;
-
-	while (i < size)
-	{
-		if (((unsigned char *)pointer1)[i] != ((unsigned char *)pointeur2)[i])
-			return (((unsigned char *)pointer1)[i] - ((unsigned char *)pointeur2)[i]);
-		i++;
-	}
-	return(0);
+	return (ft_strncmp((const char *)pointer1, (const char *)pointeur2, size));
 }
 
 // int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)

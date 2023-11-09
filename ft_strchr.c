@@ -19,14 +19,13 @@ char	*ft_strchr(const char *s, int c)
 
 	size = ft_strlen(s);
 	i = 0;
-
 	while (i <= size)
 	{
-		if(s[i] == (unsigned char)c)
-			return((char *)s + i);
+		if (s[i] == (unsigned char) c)
+			return ((char *)s + i);
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }
 
 // int main(void)

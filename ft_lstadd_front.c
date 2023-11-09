@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 23:24:39 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/08 02:30:38 by tauer            ###   ########.fr       */
+/*   Updated: 2023/11/09 21:55:08 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,5 @@ typedef struct s_list
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-
-// new  -> next (lst)
-// *lst -> next(NULL)
-// omg on as une liste
-// new -> lst -> NULL
-// info-user2 -> info_user1 -> NULL
-// on fait remonter l'info a la fonctionm du haut en changean lst
-
 	*lst = new;
 }
-
-
-

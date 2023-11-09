@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:32:41 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/08 15:17:08 by tauer            ###   ########.fr       */
+/*   Updated: 2023/11/09 21:56:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (cpy_f);
 }
 
-
 // void	del_node(void *content)
 // {
 // 	free(content);
@@ -57,7 +56,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 		printf("%s\n", stock->content);
 // 		stock = stock->next;
 // 	}
-	
+
 // 	return (0);
 // }
-
