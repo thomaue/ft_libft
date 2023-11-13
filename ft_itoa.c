@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:27:57 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/09 21:47:38 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/13 14:03:58 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*fill(int nb, long int nbr, int size)
+static char	*fill(int nb, long int nbr, int size)
 {
 	char	*str;
 
@@ -40,7 +40,7 @@ char	*fill(int nb, long int nbr, int size)
 	return (str);
 }
 
-int	mal_size(int nb, long int nbr, int size)
+static int	mal_size(int nb, long int nbr, int size)
 {
 	if (nb < 0)
 		size += 2;

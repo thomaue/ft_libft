@@ -5,21 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 17:44:42 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/08 17:44:42 by tauer            ###   ########.fr       */
+/*   Created: 2023/11/13 13:56:32 by tauer             #+#    #+#             */
+/*   Updated: 2023/11/13 13:56:32 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *pointer1, const void *pointeur2, size_t size)
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t size)
 {
-	return (ft_strncmp((const char *)pointer1, (const char *)pointeur2, size));
+	size_t	i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (((unsigned char *)ptr1)[i] != ((unsigned char *)ptr2)[i])
+			return (((unsigned char *)ptr1)[i] - ((unsigned char *)ptr2)[i]);
+		i++;
+	}
+	return (0);
 }
 
-// int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)
+// int	ft_memcmp(const void *ptr1, const void *ptr2, size_t size)
 // {
-// 	return (ft_strncmp((const char *)pointer1, (const char *)pointer2, size));
+// 	return (ft_strncmp((const char *)ptr1, (const char *)ptr2, size));
 // }
 
 // int   main(void)

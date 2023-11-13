@@ -24,7 +24,7 @@ unsigned int	count_word(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	while (s[i + 1])
+	while (s[i] && s[i + 1])
 	{
 		if (is_c(s[i], c) && !is_c(s[i + 1], c))
 			count += 1;
@@ -103,7 +103,10 @@ char	**ft_split(char const *s, char c)
 
 // 	char **tab = ft_split(str, ' ');
 
-// 	while(*tab)
-// 		printf("%s\n", *tab++);
+// 	for(int i = 0; tab[i]; i++)
+// 		printf("%s\n", tab[i]);
+
+// 	for(int i = 0; tab[i]; i++)
+// 		free(tab[i]);
 // 	return (0);
 // }

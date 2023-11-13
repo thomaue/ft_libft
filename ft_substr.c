@@ -15,40 +15,28 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	size_t	max_size;
+	size_t	i;
 
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	i = ft_strlen(s + start);
+	if (len > i)
+		len = i;
+	if (len >= SIZE_MAX)
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	max_size = 0;
-	s += start;
-	while (*s && max_size < len)
-	{
-		str[max_size++] = *s;
-		s++;
-	}
-	str[max_size] = 0;
+	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
 
 // int main()
 // {
-//     const char *input = "This is a test string";
-//     unsigned int start = 5;
-//     size_t len = 4;
+// 	char *str = ft_substr("tripouille", 0, 42000);
 
-//     char *result = ft_substr(input, start, len);
-
-//     if (result != NULL)
-//     {
-//         printf("Original string:%s\n", input);
-//         printf("Substring:%s\n", result);
-//         free(result);
-//     }
-//     else
-//     {
-//         printf("Memory allocation error.\n");
-//     }
-
+// 	free(str);
 //     return (0);
 // }

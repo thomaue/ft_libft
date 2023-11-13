@@ -12,19 +12,11 @@
 
 #include "libft.h"
 
-int	ft_is_lower(int c)
-{
-	return (c >= 'a' && c <= 'z');
-}
-
-int	ft_is_upper(int c)
-{
-	return (c >= 'A' && c <= 'Z');
-}
-
 int	ft_isalpha(int c)
 {
-	return (ft_is_lower(c) || ft_is_upper(c));
+	if (ft_tolower(c) >= 'a' && ft_tolower(c) <= 'z')
+		return (1);
+	return (0);
 }
 
 // int main(void)

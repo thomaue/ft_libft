@@ -6,7 +6,7 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 07:11:51 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/08 10:33:32 by tauer            ###   ########.fr       */
+/*   Updated: 2023/11/13 14:09:18 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
+	if (!lst || !del)
+		return ;
 	while (*lst)
 	{
 		temp = (*lst)->next;
@@ -24,10 +26,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 }
 
-void	custom_del_clear(void *content)
-{
-	free(content);
-}
+// void	custom_del_clear(void *content)
+// {
+// 	free(content);
+// }
 
 // int	main(void)
 // {

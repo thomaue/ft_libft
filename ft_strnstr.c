@@ -17,13 +17,15 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	size_t	s1_size;
 	size_t	s2_size;
 
-	if (*s2 == '\0')
+	if (ft_strlen(s2) == 0)
 		return ((char *)s1);
+	if (!len)
+		return (NULL);
 	s1_size = ft_strlen(s1);
 	s2_size = ft_strlen(s2);
 	if (s1_size < len)
 		len = s1_size;
-	while (*s1 != '\0' && len >= s2_size)
+	while (*s1 && len >= s2_size)
 	{
 		if (ft_strncmp(s1, s2, s2_size) == 0)
 			return ((char *)s1);
