@@ -6,7 +6,7 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 15:49:49 by tauer             #+#    #+#             */
-/*   Updated: 2023/11/13 14:23:59 by tauer            ###   ########.fr       */
+/*   Updated: 2023/11/16 10:37:32 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	unsigned int	i;
 	unsigned int	j;
 
-	if (!size)
-		return (0);
-	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
+	if (!size)
+		return (src_len);
+	dest_len = ft_strlen(dest);
 	i = 0;
 	j = 0;
 	if (size < 1)
