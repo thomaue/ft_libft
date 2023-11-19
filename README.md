@@ -17,10 +17,3 @@ La bibliothèque ft_libft est organisée en plusieurs fichiers, chacun contenant
 - **ft_put** : Fonctions d'affichage, telles que `ft_putchar`, `ft_putstr`, etc.
 
 - **ft_lst** : Fonctions de manipulation de listes chaînées, telles que `ft_lstnew`, `ft_lstadd_back`, etc.
-
-## Utilisation
-
-1. Clonez le repository dans votre projet :
-
-   ```bash
-   git clone https://github.com/votre-utilisateur/ft_libft.git
